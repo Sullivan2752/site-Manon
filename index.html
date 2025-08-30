@@ -26,9 +26,31 @@
     }
     header h1 {
       margin: 0;
-      font-size: 1.5em;
+      font-size: 1.2em;
       letter-spacing: 1px;
     }
+    .btn-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .nav-btn {
+    background: #f4c542;
+    color: #222;
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-decoration: none;
+    transition: 0.3s;
+    white-space: nowrap;
+  }
+  .nav-btn:hover {
+    background: #fff;
+    color: #222;
+    transform: scale(1.05);
+  }
+
     nav ul {
       list-style: none;
       display: flex;
@@ -212,7 +234,24 @@
       margin-top: 40px;
       font-size: 0.9em;
     }
-    @media(max-width: 768px) {
+    @media(max-width: 340px) {
+       header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      }
+      .btn-links {
+      width: 100%;
+      flex-direction: column;
+      align-items: stretch;
+      
+      }
+      .nav-btn {
+      width: 100%;
+      text-align: center;
+      padding: 12px 0;
+      font-size: 1em;
+      }
       header h1 {
         font-size: 1.2em;
       }
@@ -261,12 +300,14 @@
     
     <h1>Salon mn_gloww </h1>
     <nav>
+       
       <ul>
+        <div class="btn-links">
         <li><a href="#Prestation">Prestation</a></li>
         <li><a href="#tarifs">Tarifs</a></li>
         <li><a href="#reservation">Réservation</a></li>
         <li><a href="#localisation">Localisation</a></li>
-
+       </div>
         
       </ul>
     </nav>
