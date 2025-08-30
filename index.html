@@ -26,7 +26,7 @@
     }
     header h1 {
       margin: 0;
-      font-size: 1.8em;
+      font-size: 1.5em;
       letter-spacing: 1px;
     }
     nav ul {
@@ -78,30 +78,31 @@
     }
     .hero h2 {
       position: relative;
-      font-size: 3em;
+      font-size: 2.2em;
       padding: 20px;
       border-radius: 10px;
       animation: fadeIn 2s ease-in-out;
+      background: rgba(0,0,0,0.3);
     }
     @keyframes fadeIn {
       from {opacity: 0; transform: translateY(20px);}
       to {opacity: 1; transform: translateY(0);}
     }
     section {
-      padding: 60px 20px;
+      padding: 50px 20px;
       max-width: 1100px;
       margin: auto;
     }
     h2 {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
       color: #222;
-      font-size: 2em;
+      font-size: 1.8em;
     }
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
     }
     .card {
       background: #fff;
@@ -116,11 +117,11 @@
     }
     .card img {
       width: 100%;
-      height: 220px;
+      height: 180px;
       object-fit: cover;
     }
     .card-content {
-      padding: 20px;
+      padding: 15px;
       text-align: center;
     }
     .tarifs table {
@@ -129,10 +130,11 @@
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      font-size: 0.9em;
     }
     .tarifs th, .tarifs td {
       border: 1px solid #eee;
-      padding: 15px;
+      padding: 12px;
       text-align: left;
     }
     .tarifs th {
@@ -172,14 +174,16 @@
     }
     iframe {
       width: 100%;
-      height: 400px;
+      height: 300px;
       border: 0;
       border-radius: 15px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     .info-contact {
       margin-top: 25px;
+      margin: 8px 0;
       text-align: center;
+      font-size: 1em;
     }
     .info-contact p {
       margin: 8px 0;
@@ -188,7 +192,7 @@
     .info-contact a.btn {
       display: inline-block;
       margin: 10px;
-      padding: 12px 25px;
+      padding: 12px 20px;
       background: #f4c542;
       color: #222;
       text-decoration: none;
@@ -204,21 +208,50 @@
       background: #222;
       color: #fff;
       text-align: center;
-      padding: 25px;
-      margin-top: 60px;
+      padding: 20px;
+      margin-top: 40px;
       font-size: 0.9em;
     }
     @media(max-width: 768px) {
       header h1 {
-        font-size: 1.4em;
+        font-size: 1.2em;
       }
       nav ul {
+        display: none; /* cache le menu */
         flex-direction: column;
-        gap: 10px;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 180px;
+        padding: 15px;
+        border-radius: 0 0 0 10px;
+      }
+      nav ul.show {
+        display: flex;
+      }
+      nav li {
+        margin: 10px 0;
+      }
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 1.5em;
       }
       .hero h2 {
         font-size: 2em;
       }
+      @media(max-width: 480px) {
+      .card img {
+        height: 150px;
+      }
+      h2 {
+        font-size: 1.5em;
+      }
+      .tarifs table {
+        font-size: 0.8em;
+      }
+    }
     }
   </style>
 </head>
@@ -247,21 +280,21 @@
     <h2>Mes prestations</h2>
     <div class="gallery">
       <div class="card">
-        <img src="IMG_3852.jpg" alt="Manucure">
+        <img src="IMG_3854.jpg" alt="Manucure">
         <div class="card-content">
           <h3>Manucure</h3>
           <p>Sublimez vos mains avec des créations uniques : chaque manucure est un art, chaque détail compte.</p>
         </div>
       </div>
       <div class="card">
-        <img src="IMG_3853.jpg" alt="Pédicure">
+        <img src="IMG_3852.jpg" alt="Pédicure">
         <div class="card-content">
           <h3>Pédicure</h3>
           <p>Offrez à vos pieds une touche de luxe et de douceur : la pédicure parfaite pour un bien-être total.</p>
         </div>
       </div>
       <div class="card">
-        <img src="IMG_3854.jpg" alt="Tresses">
+        <img src="IMG_3851.jpg" alt="Tresses">
         <div class="card-content">
           <h3>Tresses</h3>
           <p>Transformez votre look avec des tresses élégantes et créatives : un style unique qui vous accompagne partout.</p>
